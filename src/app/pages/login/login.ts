@@ -26,15 +26,15 @@ export class Login {
 
       next: (response: any) => {
         //debugger;         
-        const data = response.data.data;
-        const strData = JSON.stringify(data);
-        localStorage.setItem("clinetStriveUser", strData);
-        //console.log(strData);
-        this.router.navigateByUrl('/client-list')
+         const data = response.data.data;
+         const strData = JSON.stringify(data);
+         localStorage.setItem("clinetStriveUser", strData);
+         console.log(strData);
+         this.router.navigateByUrl('/client-list')
       },
       error: (error: any) => {
         alert("api issue");
-        //debugger;
+       // debugger;
       }
     })
   }
